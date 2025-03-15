@@ -1,0 +1,13 @@
+services:
+  chat_app:
+    user: root
+    build:
+      context: ../src/.docker/
+      dockerfile: Dockerfile
+    volumes:
+      - ../..:/workspace:cached
+    environment:
+      NODE_ENV: development
+      CHOKIDAR_USEPOLLING: true
+      WATCHPACK_POLLING: true
+    command: sleep infinity
