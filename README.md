@@ -75,3 +75,16 @@
 7. ブラウザで[http://localhost:3000](http://localhost:3000)にアクセスし、チャットアプリの画面が表示されることを確認
 
    <img src="https://github.com/user-attachments/assets/2995f521-c9fb-410b-8ea4-6f30c90c3197" width="70%" />
+
+
+8. `.env.local`ファイルを`/src`直下に作成し、必要な環境変数を設定
+
+   ```plaintext
+   # .env.local
+   GOOGLE_GENERATIVE_AI_API_KEY=***ここにAPIキーを指定***
+   GOOGLE_GENERATIVE_AI_MODEL=gemini-1.5-flash-002
+   ```
+
+   Gemini APIキーの取得は[こちら](https://aistudio.google.com/app/apikey)から。  
+   
+   上記設定を行うことでチャットができるようになります。
