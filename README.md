@@ -1,22 +1,29 @@
 # chat-app
 
-# 開発環境構築
-
 ## 事前作業
 
 ## 必要ソフトウェアのインストール
 
-- [Visual Studio Code](https://code.visualstudio.com/download)
-  - [Japanese Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ja)
-  - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+- [Visual Studio Code](https://code.visualstudio.com/download)  
+  - [Japanese Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ja) ※拡張機能
+  - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) ※拡張機能
 - [Docker Desktop](https://www.docker.com/ja-jp/get-started/)
 
 
 ## WSLの設定 ※Windowsの場合のみ
 
-1. powershellを管理者権限で起動。
+1. 「コントロールパネル」 >「プログラム」 >「Windowsの機能の有効化または無効化」にて下記を有効化
 
-2. Ubuntuインストール
+- Hyper-V
+- Linux 用 Windows サブシステム
+- 仮想マシンプラットフォーム
+
+  すでに有効になっている場合は何もしなくてOK。
+
+
+2. powershellを管理者権限で起動
+
+3. Ubuntuインストール
 
    ```bash
    wsl --install Ubuntu-22.04
@@ -40,13 +47,13 @@
 
 1. Docker Desktopを起動
 
-2. 本リポジトリをgit clone、またzipでダウンロードして任意のディレクトリに展開
+2. 本リポジトリを`git clone`、またzipでダウンロードして任意のディレクトリに展開
 
 3. VSCodeを起動し2で展開したフォルダを開く
 
 4. `Ctrl + Shift + p` でコマンドパレットを開き、`Dev Containers: Reopen in Container` を実行
 
-   ※VSCodeの右下に下記ポップアップが表示された場合「コンテナで再度開く」を選択すれば上記と同様の操作となる
+   ※VSCodeの右下に下記ポップアップが表示された場合「コンテナーで再度開く」を選択すれば上記と同様の操作となる
 
    <img src="https://github.com/user-attachments/assets/8e5f4d9e-5d4a-40de-b6e2-82cfe889adff" width="70%" />
 
