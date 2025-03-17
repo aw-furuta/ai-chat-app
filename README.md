@@ -17,16 +17,40 @@
 - 既にDockerをインストール済みの人
 
 
-## 必要ソフトウェアのインストール
+## パターン①：環境構築
 
-- [Visual Studio Code](https://code.visualstudio.com/download) **①②共通で必須**  
+### 必要ソフトウェアのインストール
+
+- [Visual Studio Code](https://code.visualstudio.com/download)
   - [Japanese Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ja) ※拡張機能(英語でも良い人は不要)
-  - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) ※拡張機能 **②のみ必須**
+- [Node.js](https://nodejs.org/ja) ※18.0以上をインストールすること
+
+### アプリ実行準備
+
+1. 本リポジトリを`git clone`、またzipでダウンロードして任意のディレクトリに展開
+
+2. 1で展開したフォルダ内の`src`フォルダをVSCodeで開く
+
+3. ターミナルを開き、下記コマンドを実行
+
+   ```zsh
+   npm install
+   ```
+
+   ※展開したフォルダをそのまま開いてしまった場合は`cd src`でカレントディレクトリを移動してください
+
+
+## パターン②：環境構築
+
+### 必要ソフトウェアのインストール
+
+- [Visual Studio Code](https://code.visualstudio.com/download)
+  - [Japanese Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ja) ※拡張機能(英語でも良い人は不要)
+  - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) ※拡張機能
 - [Docker Desktop](https://www.docker.com/ja-jp/get-started/)
 
-- [Node.js](https://nodejs.org/ja)
 
-## ②WSLの設定 ※Windowsの場合のみ
+### WSLの設定 ※Windowsの場合のみ
 
 1. 「コントロールパネル」 >「プログラム」 >「Windowsの機能の有効化または無効化」にて下記を有効化
 
@@ -35,7 +59,6 @@
 - 仮想マシンプラットフォーム
 
   すでに有効になっている場合は何もしなくてOK。
-
 
 2. powershellを管理者権限で起動
 
@@ -59,7 +82,7 @@
 
    既定のディストリビューションが表示されたらOK
 
-## 開発手順
+### コンテナの作成
 
 1. Docker Desktopを起動
 
@@ -78,7 +101,11 @@
 
    <img src="https://github.com/user-attachments/assets/76083ead-0c5f-43bb-93e8-149a157e6312" width="100%" />
 
-6. ターミナルで下記コマンドを実行
+
+
+## 共通：アプリの起動
+
+1. VSCodeのターミナルで下記コマンドを実行
 
    ```zsh
    npm run dev
@@ -88,12 +115,15 @@
 
    上記状態になればOK。
 
-7. ブラウザで[http://localhost:3000](http://localhost:3000)にアクセスし、チャットアプリの画面が表示されることを確認
+2. ブラウザで[http://localhost:3000](http://localhost:3000)にアクセスし、チャットアプリの画面が表示されることを確認
 
-   <img src="https://github.com/user-attachments/assets/2995f521-c9fb-410b-8ea4-6f30c90c3197" width="70%" />
+   <img src="https://github.com/user-attachments/assets/2995f521-c9fb-410b-8ea4-6f30c90c3197" width="70%" />  
 
+　
+<nbsp>  
+**※上記のままではまだチャットはできない状態なので最後にAPIキーの設定を行います**  
 
-8. `.env.local`ファイルを`/src`直下に作成し、必要な環境変数を設定
+3. `.env.local`ファイルを`/src`直下に作成し、必要な環境変数を設定
 
    ```plaintext
    # .env.local
