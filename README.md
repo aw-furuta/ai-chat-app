@@ -126,8 +126,7 @@
 
    <img src="https://github.com/user-attachments/assets/2995f521-c9fb-410b-8ea4-6f30c90c3197" width="70%" />  
 
-　
-<nbsp>  
+
 **※上記のままではまだチャットはできない状態なので最後にAPIキーの設定を行います**  
 
 3. `.env.local`ファイルを`/src`直下に作成し、必要な環境変数を設定
