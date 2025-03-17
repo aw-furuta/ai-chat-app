@@ -1,16 +1,32 @@
 # chat-app
 
-## 事前作業
+## はじめに
+
+以下に2通りの環境構築パターン記載します。  
+お好きな手順で構築〜実行までを行ってください。
+
+### ① Node.jsをインストールして動作させる場合
+
+- 既にNode.jsをインストールしている(version 18.0以上)  
+- ローカルに直接環境を構築することに抵抗がない人はこっちでOK
+
+
+### ② Dockerを使ってコンテナ上で動作させたい場合
+
+- ローカルの環境を汚したくない人  
+- 既にDockerをインストール済みの人
+
 
 ## 必要ソフトウェアのインストール
 
-- [Visual Studio Code](https://code.visualstudio.com/download)  
-  - [Japanese Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ja) ※拡張機能
-  - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) ※拡張機能
+- [Visual Studio Code](https://code.visualstudio.com/download) **①②共通で必須**  
+  - [Japanese Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ja) ※拡張機能(英語でも良い人は不要)
+  - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) ※拡張機能 **②のみ必須**
 - [Docker Desktop](https://www.docker.com/ja-jp/get-started/)
 
+- [Node.js](https://nodejs.org/ja)
 
-## WSLの設定 ※Windowsの場合のみ
+## ②WSLの設定 ※Windowsの場合のみ
 
 1. 「コントロールパネル」 >「プログラム」 >「Windowsの機能の有効化または無効化」にて下記を有効化
 
