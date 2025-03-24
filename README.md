@@ -139,4 +139,14 @@
 
    Gemini APIキーの取得は[こちら](https://aistudio.google.com/app/apikey)から。  
    
-   上記設定を行うことでチャットができるようになります。
+   上記設定を行うことでチャットができるようになります。  
+
+
+### 外部APIアクセス時に`unable to get local issuer certificate`というエラーが発生する場合
+
+使用するネットワークによってはSSL/TLS証明書を正しく検証できずにエラーになってしまうことがあります。  
+その場合は`.env.local`に下記１行を追加してください。  
+
+   ```plaintext
+   NODE_TLS_REJECT_UNAUTHORIZED=0
+   ```
